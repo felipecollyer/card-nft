@@ -1,0 +1,170 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+
+p {
+  font-size: 18px;
+  margin: 0;
+}
+
+:root {
+  --primary-color: hsl(215, 51%, 70%);
+  --secundary-color: hsl(178, 100%, 50%);
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  
+  width: 1440px;
+  height: 900px;
+  background-color: var(--main-bg);
+}
+
+.container-principal {
+  margin-left: auto;
+  width: 350px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg);
+  padding: 1.3rem;
+}
+
+.container-principal .img {
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.container-principal .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+}
+.container-principal .img .icon {
+  background-color: var(--secundary-color);
+  opacity: 0;
+  position: absolute;
+  left: 0px;
+}
+
+.img:hover .icon {
+  opacity: 0.3;
+}
+
+.container-principal .description {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.description .title-token,
+.value-time {
+  width: 100%;
+}
+
+.description .title-token h1 {
+  font-size: 1.5rem;
+  color: var(--white);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.title-token h1:hover {
+  transition: 0.8s;
+  color: var(--secundary-color);
+}
+.description .sub-title h2 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-weight: 300;
+}
+.value-time {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 1rem;
+}
+.value-time .eth,
+.clock {
+  display: flex;
+  margin: 0;
+  gap: 1rem;
+  align-items: center;
+}
+
+.value-time .eth p {
+  font-size: 0.9rem;
+  color: var(--secundary-color);
+  font-weight: 500;
+}
+
+.value-time .clock p {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+.description .creator {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+
+.description .creator .imagem {
+  width: 45px;
+}
+
+.description .creator .imagem img {
+  width: 100%;
+  border-radius: 99px;
+  border: 1px solid white;
+}
+
+.text {
+  width: 100%;
+}
+
+.text p {
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+.text span {
+  color: var(--white);
+}
+
+.text span:hover {
+  transition: 0.8s;
+  color: var(--secundary-color);
+}
+
+@media (max-width: 500px) {
+
+  body {
+    width: 375px;
+    height: 667px;
+    background-color: var(--main-bg);
+  }
+  .container-principal {
+    width: 350px;
+    height: 667px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg);
+    padding: 1.3rem;
+  }
+}
